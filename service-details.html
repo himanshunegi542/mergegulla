@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merge Gulla - Service Details</title>
+  <meta name="description" content="Explore our services at Merge Gulla, including Cold Email Marketing, Website Creation, and Content Writing. Get started today!">
+  <meta name="keywords" content="Cold Email Marketing, Website Creation, Content Writing, Merge Gulla">
+  <style>
+    /* Global styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Sticky Navigation Bar */
+    .header {
+      position: sticky;
+      top: 0;
+      background-color: #1f1f1f;
+      z-index: 1000;
+      padding: 15px 0;
+    }
+
+    .header nav ul {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .header nav ul li {
+      margin: 0 20px;
+    }
+
+    .header nav ul li button {
+      color: white;
+      font-size: 16px;
+      padding: 10px 15px;
+      text-transform: uppercase;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .header nav ul li button:hover {
+      background-color: #333;
+      border-radius: 5px;
+    }
+
+    /* Service Detail Section */
+    .service-detail-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 50px 20px;
+      background-color: #1f1f1f;
+    }
+
+    .service-card {
+      background-color: #262626;
+      padding: 20px;
+      max-width: 90%; /* Set max-width to 90% */
+      width: auto; /* Allow width to be auto */
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-start; /* Align items to the start */
+      text-align: left;
+      transition: transform 0.3s ease;
+      margin: 10px;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .service-card h2 {
+      color: #ffffff;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 1.2em;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .service-card .cta-button {
+      background-color: #ff6f61;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .service-card .cta-button:hover {
+      background-color: #e5574b;
+    }
+
+    .icon {
+      margin-left: 10px;
+      font-size: 1.2em;
+    }
+
+    /* Expanded Card */
+    .expanded {
+      height: auto; /* Remove the fixed height when expanded */
+    }
+
+    .expanded p {
+      margin-bottom: 40px;
+    }
+
+    /* Collapsible Sections */
+    .collapsible-section {
+      display: none;
+      margin-top: 20px;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .collapsible-section h3 {
+      color: #ffffff;
+      font-size: 1.5em;
+    }
+
+    .collapsible-section p {
+      color: #ffffff;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    /* Pricing Columns */
+    .pricing-columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .pricing-column {
+      flex: 1;
+      background-color: #333;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .pricing-column h4 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .pricing-column p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    footer a {
+      color: #ff6f61;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="header">
+    <nav>
+      <ul>
+        <li><button onclick="location.href='#service1'">Cold Email Marketing</button></li>
+        <li><button onclick="location.href='#service2'">Website Creation</button></li>
+        <li><button onclick="location.href='#service3'">Content Writing</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Service Details Section -->
+  <section id="service1" class="service-detail-section">
+    <div class="service-card" id="card1">
+      <img src="images/service1.jpg" alt="A person working on a laptop for Cold Email Marketing">
+      <div>
+        <h2>Cold Email Marketing</h2>
+        <p>Boost your outreach with my Cold Email Marketing service. I manually send personalized emails, reducing the chances of them landing in spam folders and increasing engagement. This personalized approach helps build trust and ensures better results for your business.</p>
+        <button class="cta-button" onclick="expandCard('card1')">Get Started
+          <span class="icon" id="icon1">▼</span>
+        </button>
+        
+        <!-- Collapsible Sections -->
+        <div class="collapsible-section" id="price1">
+          <h3>Price</h3>
+          <div class="pricing-columns">
+            <div class="pricing-column">
+              <h4>Basic</h4>
+              <p>75 emails with basic personalisation</p>
+              <p>Price: $5</p>
+              <p>Delivery: 1 day</p>
+            </div>
+            <div class="pricing-column">
+              <h4>Standard</h4>
+              <p>150 emails with basic personalisation</p>
+              <p>Price: $10</p>
+              <p>Delivery: 2 days</p>
+              <p>Follow-up: 1</p>
+            </div>
+            <div class="pricing-column">
+              <h4>Premium</h4>
+              <p>250 emails with personalisation</p>
+              <p>Price: $20</p>
+              <p>Delivery: 3 days</p>
+              <p>Follow-up: 2</p>
+            </div>
+          </div>
+        </div>
+        <div class="collapsible-section" id="requirements1">
+          <h3>Requirements</h3>
+          <p>What I Need to Get Started:</p>
+          <p>Your Email Address – The account from which emails will be sent.</p>
+          <p>Password – Required for email setup (kept confidential).</p>
+          <p>Subject Line – The main headline for your email.</p>
+          <p>Email Template – The content you want to send.</p>
+          <p>Email List – A list of recipients' email addresses.</p>
+        </div>
+        <div class="collapsible-section" id="contact1">
+          <h3>Contact</h3>
+          <button class="cta-button" onclick="location.href='landing-page.html#contact'">Contact</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service2" class="service-detail-section">
+    <div class="service-card" id="card2">
+      <img src="images/serviceimage2.jpg" alt="A designer creating a website layout">
+      <div>
+        <h2>Website Creation</h2>
+        <p>Looking for a stunning, functional website? At Merge Gulla, we specialize in creating custom websites that are visually appealing, user-friendly, and optimized for performance. Whether you need a personal blog, a business site, or an e-commerce platform, we deliver high-quality websites tailored to your needs.</p>
+        <button class="cta-button" onclick="expandCard('card2')">Get Started
+          <span class="icon" id="icon2">▼</span>
+        </button>
+        
+        <!-- Collapsible Sections -->
+        <div class="collapsible-section" id="price2">
+          <h3>Price</h3>
+          <div class="pricing-columns">
+            <div class="pricing-column">
+              <h4>Basic</h4>
+              <p>$15</p>
+              <p>user friendly landing page or portfolio website.</p>
+            </div>
+            <div class="pricing-column">
+              <h4>Standard</h4>
+              <p>$35</p>
+              <p>Multi-page(maximum 3 pages) website with custom design and basic features.</p>
+            </div>
+            <div class="pricing-column">
+              <h4>Premium</h4>
+              <p>$50</p>
+              <p>custom website with many features(maximum 5 pages).</p>
+            </div>
+          </div>
+        </div>
+        <div class="collapsible-section" id="requirements2">
+          <h3>Requirements</h3>
+          <p>What I Need to Get Started:</p>
+          <p>Business Name & Niche – Your industry and website purpose.</p>
+          <p>Design & Features – Preferred layout, colors, and functionalities.</p>
+          <p>Content & Images – Text, logos, and pictures to include.</p>
+          <p>Domain & Hosting – Credentials if you have them, or I can assist.</p>
+          <p>For further details, feel free to contact us!</p>
+        </div>
+        <div class="collapsible-section" id="contact2">
+          <h3>Contact</h3>
+          <button class="cta-button" onclick="location.href='landing-page.html#contact'">Contact</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service3" class="service-detail-section">
+    <div class="service-card" id="card3">
+      <img src="images/serviceimage3.jpg" alt="A writer typing content on a laptop">
+      <div>
+        <h2>Content Writing</h2>
+        <p>Looking for compelling and engaging content? At Merge Gulla, we offer expert content writing services tailored to your needs. Whether it’s for blogs, websites, or marketing materials, our writing helps you connect with your audience and drive results. Let us craft content that speaks to your brand and resonates with your readers.</p>
+        <button class="cta-button" onclick="expandCard('card3')">Get Started
+          <span class="icon" id="icon3">▼</span>
+        </button>
+        
+        <!-- Collapsible Sections -->
+        <div class="collapsible-section" id="price3">
+          <h3>Price</h3>
+          <div class="pricing-columns">
+            <div class="pricing-column">
+              <h4>Basic</h4>
+              <p>Basic blog or article (up to 500 words)</p>
+              <p>Price: $5</p>
+              <p>Delivery: 1 day</p>
+              <p>Revisions: 1</p>
+            </div>
+            <div class="pricing-column">
+              <h4>Standard</h4>
+              <p>In-depth article or blog (up to 1000 words)</p>
+              <p>Price: $10</p>
+              <p>Delivery: 2 days</p>
+              <p>Revisions: 2</p>
+            </div>
+            <div class="pricing-column">
+              <h4>Premium</h4>
+              <p>Comprehensive, SEO-optimized articles with research (up to 1500 words)</p>
+              <p>Price: $15</p>
+              <p>Delivery: 3 days</p>
+              <p>Revisions: 2</p>
+            </div>
+          </div>
+        </div>
+        <div class="collapsible-section" id="requirements3">
+          <h3>Requirements</h3>
+          <p>What I Need to Get Started:</p>
+          <p>Topic & Industry – The subject and niche of the content.</p>
+          <p>Tone & Style – Formal, casual, persuasive, etc.</p>
+          <p>Word Count – Desired length of the content.</p>
+          <p>Keywords (if any) – Specific words for SEO optimization.</p>
+          <p>Additional Guidelines – Any special instructions or references.</p>
+          <p>For further details, feel free to contact us!</p>
+        </div>
+        <div class="collapsible-section" id="contact3">
+          <h3>Contact</h3>
+          <button class="cta-button" onclick="location.href='landing-page.html#contact'">Contact</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Merge Gulla. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function expandCard(cardId) {
+      const card = document.getElementById(cardId);
+      card.classList.toggle('expanded');
+      
+      const sections = card.querySelectorAll('.collapsible-section');
+      sections.forEach(section => {
+        section.style.display = section.style.display === 'block' ? 'none' : 'block';
+      });
+
+      // Change the icon based on the expanded state
+      const icon = document.querySelector(`#icon${cardId.charAt(cardId.length - 1)}`);
+      icon.textContent = card.classList.contains('expanded') ? '▲' : '▼';
+    }
+  </script>
+
+</body>
+</html>
